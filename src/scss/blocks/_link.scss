@@ -1,0 +1,33 @@
+.link {
+	margin-bottom: 100px;
+	&__wrapper {
+		display: flex;
+	}
+	&__contain {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background: rgba(255, 255, 255, 0.35);
+		box-shadow: 0px 14px 50px 5px rgba(178, 200, 200, 0.1);
+		backdrop-filter: blur(40px);
+		border-radius: 15px;
+		padding: 50px 95px 70px 95px;
+
+		margin-right: 30px;
+	}
+	&__list {
+		margin-top: 45px;
+		font-size: 18px;
+		line-height: 150%;
+		li {
+			margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__button {
+		margin-top: 30px;
+	}
+}

@@ -1,0 +1,37 @@
+.intro {
+	background: url("../img/intro-bg.jpg") no-repeat;
+	background-size: cover;
+	background-color: #fafafab2;
+	padding-top: 223px;
+	&__upline {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 165%;
+	}
+	&__title {
+		max-width: 627px;
+		font-weight: bold;
+		font-size: 35px;
+		line-height: 41px;
+		letter-spacing: 0.015em;
+		margin-top: 25px;
+	}
+	&__remark {
+		margin-top: 30px;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 150%;
+		max-width: 409px;
+	}
+	&__buttons {
+		margin-top: 40px;
+		display: flex;
+		padding-bottom: 488px;
+	}
+	&__btn {
+		margin-right: 30px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

@@ -1,0 +1,48 @@
+.legality {
+	margin-top: 150px;
+	margin-bottom: 148px;
+	&__wrapper {
+		margin-top: 60px;
+		display: flex;
+	}
+	&__content {
+		flex: 0 1 70%;
+	}
+	&__text {
+		margin-top: 20px;
+		font-size: 18px;
+		line-height: 27px;
+		margin-bottom: 20px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+	&__item {
+		margin-left: 30px;
+	}
+	&__upline {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 150%;
+		margin-bottom: 27px;
+	}
+	&__remark {
+		font-size: 18px;
+		line-height: 150%;
+		margin-bottom: 7px;
+
+		&--two {
+			margin-top: 31px;
+		}
+	}
+	&__link {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 165%;
+		color: $accent;
+		border-bottom: 2px solid $accent;
+		&:hover {
+			color: $accent;
+		}
+	}
+}

@@ -1,0 +1,50 @@
+.review {
+	&__slider {
+		margin-top: 80px;
+		min-width: 0;
+		position: relative;
+		display: flex !important;
+	}
+	&__item {
+		height: inherit !important;
+		height: 100%;
+		flex: 0 1 31.5%;
+		background: #ffffff;
+		border-radius: 15px;
+		padding: 44px 43px 59px 43px;
+		margin-left: 30px;
+		margin-bottom: 15px;
+		height: 100%;
+		&:first-child {
+			margin-left: 0;
+		}
+		@include md-d {
+			margin-left: 0;
+		}
+	}
+	&__head {
+		display: flex;
+	}
+	&__name {
+		margin-left: 11px;
+	}
+	&__title {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 20px;
+		color: #313131;
+	}
+	&__from {
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 20px;
+		color: #556666;
+		margin-top: 4px;
+	}
+
+	&__commend {
+		margin-top: 31px;
+		font-size: 12px;
+		line-height: 20px;
+	}
+}

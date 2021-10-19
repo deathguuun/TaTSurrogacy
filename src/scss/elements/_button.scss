@@ -1,0 +1,36 @@
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: $accent;
+	border-radius: 10px;
+	cursor: pointer;
+	background: linear-gradient(88.02deg, #50ada8 0%, #77c2be 100%);
+	box-shadow: 0px 14px 50px 5px rgba(178, 200, 200, 0.1);
+	border-radius: 15px;
+	transition: all 0.5s ease;
+	color: #fff;
+	font-weight: 600;
+	line-height: 38px;
+	&--lg {
+		width: 350px;
+		height: 58px;
+	}
+	&--sm {
+		width: 255px;
+		height: 69px;
+	}
+	&:hover {
+		background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+			linear-gradient(88.02deg, #50ada8 0%, #77c2be 100%);
+		transition: all 0.5s ease;
+		color: #fff;
+	}
+	&:visited,
+	&:active,
+	&:focus {
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+			linear-gradient(88.02deg, #50ada8 0%, #77c2be 100%);
+		color: #fff;
+	}
+}
