@@ -362,6 +362,8 @@ $headerBurgerColor: $accent;
 	overflow: hidden;
 	width: 100%;
 	position: fixed;
+	touch-action: none;
+	-ms-touch-action: none;
 	.intro {
 		filter: blur(10px);
 	}
