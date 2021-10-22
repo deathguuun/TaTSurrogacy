@@ -80,7 +80,7 @@ $(window).on('resize', function (e) {
 
 
 
-//Adaptive SlickSlider REVIEW
+//Adaptive SlickSlider ALLIES
 $(window).on('resize', function (e) {
 	// Переменная, по которой узнаем запущен слайдер или нет.
 	// Храним её в data
@@ -96,6 +96,7 @@ $(window).on('resize', function (e) {
 				dots: false,
 				arrows: true,
 				adaptiveHeight: true,
+				fade: true,
 			}).data({ 'init-slider': 1 });
 		}
 	}

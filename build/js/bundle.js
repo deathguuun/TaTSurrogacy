@@ -86,7 +86,7 @@ $(window).on('resize', function (e) {
         });
       }
     }
-}).trigger('resize'); //Adaptive SlickSlider REVIEW
+}).trigger('resize'); //Adaptive SlickSlider ALLIES
 
 $(window).on('resize', function (e) {
   // Переменная, по которой узнаем запущен слайдер или нет.
@@ -102,7 +102,8 @@ $(window).on('resize', function (e) {
         slidesToScroll: 1,
         dots: false,
         arrows: true,
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        fade: true
       }).data({
         'init-slider': 1
       });
