@@ -1,19 +1,42 @@
 .link {
 	margin-bottom: 100px;
+	@include sm-d {
+		margin-bottom: 80px;
+	}
+
 	&__wrapper {
 		display: flex;
+		@include lg-d {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
 	}
 	&__contain {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		flex: 0 1 48%;
 		background: rgba(255, 255, 255, 0.35);
 		box-shadow: 0px 14px 50px 5px rgba(178, 200, 200, 0.1);
 		backdrop-filter: blur(40px);
 		border-radius: 15px;
 		padding: 50px 95px 70px 95px;
-
 		margin-right: 30px;
+		&:last-child {
+			margin-right: 0;
+		}
+		@include xl-d {
+			padding: 30px 65px 50px 65px;
+		}
+		@include lg-d {
+			padding: 50px 95px 70px 95px;
+			margin-right: 0;
+			margin-top: 20px;
+		}
+		@include sm-d {
+			padding: 30px 18px 30px 18px;
+			max-width: 296px;
+		}
 	}
 	&__list {
 		margin-top: 45px;
@@ -21,13 +44,25 @@
 		line-height: 150%;
 		li {
 			margin-bottom: 10px;
+			list-style-type: disc;
 			&:last-child {
 				margin-bottom: 0;
 			}
+			@include sm-d {
+				margin-bottom: 10px;
+			}
+		}
+		@include sm-d {
+			margin-top: 35px;
+			font-size: 14px;
+			margin-left: 18px;
 		}
 	}
 
 	&__button {
 		margin-top: 30px;
+		@include sm-d {
+			margin-top: 25px;
+		}
 	}
 }

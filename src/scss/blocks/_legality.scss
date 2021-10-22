@@ -1,9 +1,17 @@
 .legality {
 	margin-top: 150px;
-	margin-bottom: 148px;
+	margin-bottom: 150px;
+	@include md-d {
+		margin-top: 80px;
+		margin-bottom: 80px;
+	}
 	&__wrapper {
 		margin-top: 60px;
 		display: flex;
+		@include md-d {
+			margin-top: 40px;
+			flex-direction: column;
+		}
 	}
 	&__content {
 		flex: 0 1 70%;
@@ -16,15 +24,26 @@
 		&:first-child {
 			margin-top: 0;
 		}
+		@include sm-d {
+			font-size: 14px;
+		}
 	}
 	&__item {
 		margin-left: 30px;
+		@include md-d {
+			margin-left: 0;
+			margin-top: 30px;
+		}
 	}
 	&__upline {
 		font-weight: 500;
 		font-size: 18px;
 		line-height: 150%;
 		margin-bottom: 27px;
+		@include md-d {
+			font-size: 14px;
+			margin-bottom: 20px;
+		}
 	}
 	&__remark {
 		font-size: 18px;
@@ -33,6 +52,13 @@
 
 		&--two {
 			margin-top: 31px;
+			@include md-d {
+				margin-top: 20px;
+			}
+		}
+		@include md-d {
+			font-size: 14px;
+			margin-bottom: 10px;
 		}
 	}
 	&__link {
@@ -43,6 +69,9 @@
 		border-bottom: 2px solid $accent;
 		&:hover {
 			color: $accent;
+		}
+		@include md-d {
+			font-size: 14px;
 		}
 	}
 }

@@ -3,6 +3,57 @@
 	background: url("../img/footer.png") no-repeat;
 	background-size: cover;
 	padding: 194px 0px 45px 0px;
+
+	h3 {
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 22px;
+		color: #fafafa;
+		margin-bottom: 27px;
+	}
+	a {
+		color: #fafafa;
+	}
 	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__nav {
+	}
+	&__nav-wrapper {
+		display: flex;
+	}
+	&__column {
+		margin-right: 46px;
+		&:last-child {
+			margin-right: 0;
+		}
+		li {
+			margin-bottom: 16px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+		a {
+			margin-bottom: 16px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		img {
+			margin-right: 19px;
+		}
+	}
+	&__social {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&__remark {
+		color: #fafafa;
 	}
 }

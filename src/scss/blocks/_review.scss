@@ -3,23 +3,30 @@
 		margin-top: 80px;
 		min-width: 0;
 		position: relative;
-		display: flex !important;
+		display: flex;
+		@include md-d {
+			margin-top: 50px;
+			// display: flex;
+			// align-items: center;
+		}
 	}
 	&__item {
 		height: inherit !important;
-		height: 100%;
-		flex: 0 1 31.5%;
+
+		// flex: 0 1 31.5%;
+		max-width: 31.5%;
 		background: #ffffff;
 		border-radius: 15px;
 		padding: 44px 43px 59px 43px;
 		margin-left: 30px;
 		margin-bottom: 15px;
-		height: 100%;
+
 		&:first-child {
 			margin-left: 0;
 		}
 		@include md-d {
 			margin-left: 0;
+			// flex: 1 1 100%;
 		}
 	}
 	&__head {
@@ -46,5 +53,45 @@
 		margin-top: 31px;
 		font-size: 12px;
 		line-height: 20px;
+	}
+
+	//Slick settings
+	.slick-track {
+		min-width: 0;
+		display: flex;
+		align-items: flex-start;
+		@include md-d {
+			flex-wrap: wrap;
+		}
+	}
+	.slick-list {
+		overflow: hidden;
+		padding: 0px 0px 0px 0px;
+	}
+	.slick-arrow {
+		position: absolute;
+		bottom: -40px;
+		z-index: 10;
+		font-size: 0;
+		width: 38px;
+		height: 38px;
+		display: inline-block;
+		border-radius: 50%;
+	}
+	.slick-prev {
+		right: 50%;
+		background-image: url("/build/img/arrow-prew.png");
+		background-position: center;
+		margin-right: 7px;
+	}
+	.slick-next {
+		left: 50%;
+		background-image: url("/build/img/arrow-next.png");
+		background-position: center;
+		margin-left: 7px;
+	}
+	.slick-arrow.slick-disabled {
+		opacity: 0.2;
+		cursor: default;
 	}
 }

@@ -12,13 +12,33 @@
 	color: #fff;
 	font-weight: 600;
 	line-height: 38px;
+	@include sm-d {
+		font-size: 12px;
+		line-height: 20;
+	}
 	&--lg {
 		width: 350px;
 		height: 58px;
+		@include sm-d {
+			width: 296px;
+			height: 47px;
+		}
 	}
 	&--sm {
 		width: 255px;
 		height: 69px;
+		@include sm-d {
+			width: 260px;
+			height: 47px;
+		}
+	}
+	&--link {
+		width: 350px;
+		height: 58px;
+		@include sm-d {
+			width: 260px;
+			height: 47px;
+		}
 	}
 	&:hover {
 		background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),

@@ -1,12 +1,22 @@
 .benefits {
 	background: url("../img/benefits-bg.jpg") no-repeat;
 	background-size: cover;
+	@include sm-d {
+		background: none;
+	}
 	&__title-one {
 		margin-top: 52px;
+		@include sm-d {
+			margin-top: 0;
+		}
 	}
 	&__way {
 		margin-top: 112px;
 		display: flex;
+		@include sm-d {
+			margin-top: 60px;
+			flex-direction: column;
+		}
 	}
 	&__box {
 		flex: 1 1 33.333%;
@@ -20,11 +30,28 @@
 		&:last-child {
 			margin-right: 0;
 		}
+		@include md-d {
+			margin-right: 15px;
+		}
+		@include sm-d {
+			margin-right: 0;
+			margin-bottom: 40px;
+			padding: 35px 18px 40px 18px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 	&__box-img {
 		position: absolute;
 		top: -30px;
 		left: -5px;
+		@include sm-d {
+			top: -35px;
+			svg {
+				max-width: 64px;
+			}
+		}
 	}
 	&__box-title {
 		font-weight: 600;
@@ -40,12 +67,18 @@
 	}
 	&__title-two {
 		margin-top: 150px;
+		@include sm-d {
+			margin-top: 80px;
+		}
 	}
 	&__content {
-		margin-top: 31px;
+		margin-top: 21px;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		@include sm-d {
+			flex-direction: column;
+		}
 	}
 	&__item {
 		margin-top: 50px;
@@ -54,11 +87,17 @@
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
+		@include sm-d {
+			margin-top: 30px;
+		}
 	}
 	&__item-img {
 		svg {
 			width: 77px;
 			height: 77px;
+			@include sm-d {
+				height: 48px;
+			}
 		}
 		svg path {
 			fill: $accent;
@@ -70,12 +109,21 @@
 		line-height: 165%;
 		margin-top: 21px;
 		color: $colorH1;
+		@include sm-d {
+			margin-top: 21px;
+			font-size: 14px;
+			line-height: 150%;
+		}
 	}
 	&__item-text {
 		font-weight: 500;
 		font-size: 16px;
 		line-height: 165%;
 		margin-top: 15px;
+		@include sm-d {
+			margin-top: 11px;
+			font-size: 12px;
+		}
 	}
 
 	&__numbers {
@@ -85,6 +133,11 @@
 		backdrop-filter: blur(40px);
 		border-radius: 15px;
 		display: flex;
+		@include sm-d {
+			margin-top: 50px;
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 	&__numbers-img {
 		svg path {
@@ -105,6 +158,20 @@
 		&:last-child {
 			border-right: none;
 		}
+		@include sm-d {
+			padding-bottom: 31px;
+			border-right: none;
+			max-width: 194px;
+			border-bottom: 4px solid #ecf3f3;
+			text-align: center;
+			margin: 30px 0px 30px 0px;
+			&:first-child {
+				margin-top: 49px;
+			}
+			&:last-child {
+				border-bottom: none;
+			}
+		}
 	}
 	&__buttons {
 		margin-top: 50px;
@@ -115,6 +182,14 @@
 			&:last-child {
 				margin-right: 0;
 			}
+			@include sm-d {
+				margin-right: 0;
+				margin-top: 10px;
+			}
+		}
+		@include sm-d {
+			flex-direction: column;
+			margin-top: 15px;
 		}
 	}
 }

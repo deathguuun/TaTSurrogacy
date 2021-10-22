@@ -9,14 +9,25 @@ body {
 
 h1 {
 	font-weight: bold;
-	font-size: 35px;
+	// font-size: 35px;
+	@include adaptive-font(35, 20);
 	line-height: 41px;
 	letter-spacing: 0.015em;
+	@include xl {
+		font-size: 35px;
+	}
+	@include sm-d {
+		line-height: 26px;
+	}
 }
 
 h2 {
 	font-weight: bold;
-	font-size: 35px;
+	// font-size: 35px;
+	@include adaptive-font(35, 20);
 	line-height: 130%;
 	letter-spacing: 0.015em;
+	@include xl {
+		font-size: 35px;
+	}
 }

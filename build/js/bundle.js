@@ -55,7 +55,69 @@ $(".question__title").on("click", function () {
     $(".content").slideUp(200);
     $(this).siblings(".question__content").slideDown(200);
   }
-});
+}); //Adaptive SlickSlider REVIEW
+
+$(window).on('resize', function (e) {
+  // Переменная, по которой узнаем запущен слайдер или нет.
+  // Храним её в data
+  var init = $(".review__slider").data('init-slider'); // Если мобильный
+
+  if (window.innerWidth < 775) {
+    // Если слайдер не запущен
+    if (init != 1) {
+      // Запускаем слайдер и записываем в data init-slider = 1
+      $('.review__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        adaptiveHeight: true
+      }).data({
+        'init-slider': 1
+      });
+    }
+  } // Если десктоп
+  else {
+      // Если слайдер запущен
+      if (init == 1) {
+        // Разрушаем слайдер и записываем в data init-slider = 0
+        $('.review__slider').slick('unslick').data({
+          'init-slider': 0
+        });
+      }
+    }
+}).trigger('resize'); //Adaptive SlickSlider REVIEW
+
+$(window).on('resize', function (e) {
+  // Переменная, по которой узнаем запущен слайдер или нет.
+  // Храним её в data
+  var init = $(".question__allies").data('init-slider'); // Если мобильный
+
+  if (window.innerWidth < 775) {
+    // Если слайдер не запущен
+    if (init != 1) {
+      // Запускаем слайдер и записываем в data init-slider = 1
+      $('.question__allies').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        arrows: true,
+        adaptiveHeight: true
+      }).data({
+        'init-slider': 1
+      });
+    }
+  } // Если десктоп
+  else {
+      // Если слайдер запущен
+      if (init == 1) {
+        // Разрушаем слайдер и записываем в data init-slider = 0
+        $('.question__allies').slick('unslick').data({
+          'init-slider': 0
+        });
+      }
+    }
+}).trigger('resize');
 
 },{}],3:[function(require,module,exports){
 "use strict";
