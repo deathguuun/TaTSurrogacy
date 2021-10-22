@@ -6,14 +6,10 @@
 		display: flex;
 		@include md-d {
 			margin-top: 50px;
-			// display: flex;
-			// align-items: center;
 		}
 	}
 	&__item {
 		height: inherit !important;
-
-		// flex: 0 1 31.5%;
 		max-width: 31.5%;
 		background: #ffffff;
 		border-radius: 15px;
@@ -26,7 +22,6 @@
 		}
 		@include md-d {
 			margin-left: 0;
-			// flex: 1 1 100%;
 		}
 	}
 	&__head {
@@ -80,13 +75,13 @@
 	}
 	.slick-prev {
 		right: 50%;
-		background-image: url("/build/img/arrow-prew.png");
+		background-image: url("../img/arrow-prew.png");
 		background-position: center;
 		margin-right: 7px;
 	}
 	.slick-next {
 		left: 50%;
-		background-image: url("/build/img/arrow-next.png");
+		background-image: url("../img/arrow-next.png");
 		background-position: center;
 		margin-left: 7px;
 	}
