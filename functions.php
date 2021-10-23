@@ -1,6 +1,6 @@
 <?php
 function assets_version()
 {
-    $assets_version = "42839";
+    $assets_version = "7970";
     return $assets_version;
 }

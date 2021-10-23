@@ -23,6 +23,7 @@ $(document).ready(function () {
 });
 
 
+
 //Acordeon
 $(".question__title").on("click", function () {
 	if ($(this).hasClass("active")) {
@@ -109,4 +110,15 @@ $(window).on('resize', function (e) {
 		}
 	}
 }).trigger('resize');
+
+// Anchor Slide
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+	anchor.addEventListener('click', function (e) {
+		e.preventDefault();
+		document.querySelector(this.getAttribute('href')).scrollIntoView({
+
+			behavior: 'smooth'
+		});
+	});
+});
 

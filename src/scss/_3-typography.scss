@@ -31,3 +31,35 @@ h2 {
 		font-size: 35px;
 	}
 }
+
+.adittional-title {
+	white-space: nowrap;
+	text-align: center;
+	position: relative;
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 130%;
+	letter-spacing: 0.015em;
+	margin: 0 auto;
+	color: $colorH1;
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		border-bottom: solid 4px $accent;
+		height: 0px;
+		width: 157px;
+		left: 0px;
+		top: 50%;
+	}
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		border-bottom: solid 4px $accent;
+		height: 0px;
+		width: 157px;
+		right: 0px;
+		top: 50%;
+	}
+}
