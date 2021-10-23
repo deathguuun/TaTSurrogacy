@@ -3,6 +3,11 @@
 	background: url("../img/footer.png") no-repeat;
 	background-size: cover;
 	padding: 194px 0px 45px 0px;
+	@include md-d {
+		background-image: none;
+		background-color: $accent;
+		padding: 47px 0px 52px 0px;
+	}
 
 	h3 {
 		font-weight: 600;
@@ -17,11 +22,22 @@
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
+		@include md-d {
+			flex-direction: column;
+		}
 	}
-	&__nav {
+	&__logo {
+		@include lg-d {
+			display: none;
+		}
 	}
 	&__nav-wrapper {
 		display: flex;
+	}
+	&__confid-one {
+		@include md-d {
+			display: none;
+		}
 	}
 	&__column {
 		margin-right: 46px;

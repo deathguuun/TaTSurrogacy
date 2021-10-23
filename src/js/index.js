@@ -4,7 +4,6 @@ $(document).ready(() => {
 	svg4everybody();
 	// End don't touch
 	require('./main.js');
-	require('./scrollReveral.js');
 });
 
 // remove preloader
