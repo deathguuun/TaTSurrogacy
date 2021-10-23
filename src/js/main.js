@@ -1,14 +1,15 @@
-//HEADER slide
-(function () {
-	var header = document.querySelector('.header');
-	window.onscroll = () => {
-		if (window.pageYOffset > 22) {
-			header.classList.add('header__active');
-		} else {
-			header.classList.remove('header__active');
-		}
-	};
-}());
+// Anchor Slide
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+	anchor.addEventListener('click', function (e) {
+		e.preventDefault();
+
+		document.querySelector(this.getAttribute('href')).scrollIntoView({
+
+			behavior: 'smooth'
+		});
+	});
+});
+
 
 //Header BURGER
 $(document).ready(function () {
@@ -39,7 +40,7 @@ $(".question__title").on("click", function () {
 		$(this)
 			.find(".question__icon")
 			.addClass("clicked");
-		// $(".set > a").removeClass("active");
+		$(".set > a").removeClass("active");
 		$(this).addClass("active");
 		$(".content").slideUp(200);
 		$(this)
@@ -111,14 +112,5 @@ $(window).on('resize', function (e) {
 	}
 }).trigger('resize');
 
-// Anchor Slide
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-	anchor.addEventListener('click', function (e) {
-		e.preventDefault();
-		document.querySelector(this.getAttribute('href')).scrollIntoView({
 
-			behavior: 'smooth'
-		});
-	});
-});
 
