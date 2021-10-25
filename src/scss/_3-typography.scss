@@ -37,7 +37,7 @@ h2 {
 	text-align: center;
 	position: relative;
 	font-weight: bold;
-	font-size: 30px;
+	@include adaptive-font(30, 20);
 	line-height: 130%;
 	letter-spacing: 0.015em;
 	margin: 0 auto;
@@ -61,5 +61,16 @@ h2 {
 		width: 157px;
 		right: 0px;
 		top: 50%;
+	}
+	@include md-d {
+		text-align: left;
+		white-space: pre-wrap;
+		&::before {
+			top: 40px;
+			width: 130px;
+		}
+		&::after {
+			display: none;
+		}
 	}
 }
