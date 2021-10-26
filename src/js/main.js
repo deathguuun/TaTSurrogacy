@@ -155,10 +155,44 @@ $(".tab_drawer_heading").click(function () {
 });
 
 
-/* Extra class "tab_last"
-	to add border to bottom side
-	of last tab
-$('ul.tabs li').last().addClass("tab_last");*/
+//TABS DONORAM
+// tabbed content
 
+$(".tab_contents").hide();
+$(".tab_contents:first").show();
+
+/* if in tab mode */
+$("ul.tabss li").click(function () {
+
+	$(".tab_contents").hide();
+	var activeTab = $(this).attr("rel");
+	$("#" + activeTab).fadeIn();
+
+	$("ul.tabss li").removeClass("active");
+	$(this).addClass("active");
+
+	$(".tab_drawer_headings").removeClass("d_active");
+	$(".tab_drawer_headings[rel^='" + activeTab + "']").addClass("d_active");
+
+	/*$(".tabs").css("margin-top", function(){ 
+		return ($(".tab_container").outerHeight() - $(".tabs").outerHeight() ) / 2;
+	});*/
+});
+$(".tab_containers").css("min-height", function () {
+	return $(".tabss").outerHeight() + 50;
+});
+/* if in drawer mode */
+$(".tab_drawer_headings").click(function () {
+
+	$(".tab_contents").hide();
+	var d_activeTab = $(this).attr("rel");
+	$("#" + d_activeTab).fadeIn();
+
+	$(".tab_drawer_headings").removeClass("d_active");
+	$(this).addClass("d_active");
+
+	$("ul.tabss li").removeClass("active");
+	$("ul.tabss li[rel^='" + d_activeTab + "']").addClass("active");
+});
 
 

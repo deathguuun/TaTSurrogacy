@@ -1,4 +1,4 @@
-.surmam {
+.donor {
 	padding-top: 150px;
 	&__title {
 		max-width: 807px;
@@ -37,10 +37,11 @@
 			margin-top: 0;
 		}
 	}
-	.tabs {
+
+	.tabss {
 		width: 33%;
 	}
-	ul.tabs {
+	ul.tabss {
 		display: inline-block;
 		vertical-align: top;
 		position: relative;
@@ -114,7 +115,7 @@
 		}
 	}
 
-	.tab_container {
+	.tab_containers {
 		display: inline-block;
 		vertical-align: top;
 		position: relative;
@@ -127,7 +128,7 @@
 		margin-left: 35px;
 	}
 
-	.tab_content {
+	.tab_contents {
 		padding: 20px;
 		height: 100%;
 		display: none;
@@ -138,7 +139,7 @@
 		}
 	}
 
-	.tab_drawer_heading {
+	.tab_drawer_headings {
 		display: none;
 		margin-left: 20px;
 		@include sm-d {
@@ -154,17 +155,17 @@
 	}
 
 	@media screen and (max-width: 803px) {
-		ul.tabs {
+		ul.tabss {
 			display: none;
 		}
-		.tab_container {
+		.tab_containers {
 			display: block;
 			margin: 0 auto;
 			width: 100%;
 			border-top: none;
 			border-radius: 0;
 		}
-		.tab_drawer_heading {
+		.tab_drawer_headings {
 			background: #ffffff;
 			box-shadow: 0px 14px 50px 5px rgba(178, 200, 200, 0.1);
 			border-radius: 15px;
