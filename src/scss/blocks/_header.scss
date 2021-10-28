@@ -17,6 +17,19 @@ $headerBurgerColor: $accent;
 		width: 100%;
 		z-index: 5;
 		height: 50px;
+		svg {
+			&:hover {
+				path {
+					fill: $colorH1;
+				}
+			}
+			&:focus,
+			&:active {
+				path {
+					fill: $colorMain;
+				}
+			}
+		}
 	}
 	&__box {
 		display: flex;
@@ -51,18 +64,25 @@ $headerBurgerColor: $accent;
 			font-size: 16px;
 			line-height: 20px;
 			color: #fafafa;
-			&:hover,
-			&:active {
+			&:hover {
 				text-decoration: underline;
+				color: $colorH1;
+			}
+			&:active,
+			&:focus {
+				text-decoration: underline;
+				color: $colorMain;
 			}
 		}
 	}
 	&__contacts {
 		display: flex;
 		align-items: center;
-		img {
+
+		svg {
 			margin-right: 10px;
 		}
+
 		a {
 			margin-right: 44px;
 			font-weight: 500;
@@ -71,11 +91,46 @@ $headerBurgerColor: $accent;
 			color: #fafafa;
 			display: flex;
 			align-items: center;
+			border-bottom: 1px solid #fff;
 			&:last-child {
 				margin-right: 0;
 			}
+			&:hover {
+				color: $colorH1;
+				border-bottom: 1px solid $colorH1;
+			}
+			&:active,
+			&:focus {
+				color: $colorMain;
+				border-bottom: 1px solid $colorMain;
+			}
 			@include sm-d {
 				font-size: 12px;
+			}
+			&:hover {
+				svg path {
+					stroke: $colorH1;
+				}
+			}
+			&:active,
+			&:focus {
+				color: $colorMain;
+				svg path {
+					stroke: $colorMain;
+				}
+			}
+		}
+		.phone:hover {
+			svg path {
+				fill: $colorH1;
+				stroke: transparent;
+			}
+		}
+		.phone:active,
+		.phone:focus {
+			svg path {
+				fill: $colorMain;
+				stroke: transparent;
 			}
 		}
 	}
@@ -130,7 +185,7 @@ $headerBurgerColor: $accent;
 		position: relative;
 		z-index: 2;
 		& li a {
-			font-weight: 600;
+			font-weight: 500;
 			font-size: 16px;
 			line-height: 38px;
 			white-space: nowrap;
@@ -138,6 +193,10 @@ $headerBurgerColor: $accent;
 			&:hover {
 				transition: all 0.3s ease;
 				color: $accent;
+			}
+			&:focus,
+			&:active {
+				color: #3f5858;
 			}
 		}
 	}

@@ -36,11 +36,14 @@
 		margin-top: 40px;
 		display: flex;
 		padding-bottom: 488px;
+		@include md-d {
+			padding-bottom: 370px;
+		}
 		@include sm-d {
 			flex-direction: column;
 			align-items: center;
 			margin-top: 25px;
-			padding-bottom: 220px;
+			padding-bottom: 110px;
 		}
 	}
 	&__btn {

@@ -68,7 +68,13 @@
 		color: $accent;
 		border-bottom: 2px solid $accent;
 		&:hover {
-			color: $accent;
+			color: $colorH1;
+			border-bottom: 2px solid $colorH1;
+		}
+		&:focus,
+		&:active {
+			color: $colorMain;
+			border-bottom: 2px solid $colorMain;
 		}
 		@include md-d {
 			font-size: 14px;
