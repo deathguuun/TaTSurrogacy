@@ -1,5 +1,9 @@
 .surmam {
 	padding-top: 150px;
+	svg path {
+		fill: #556666;
+	}
+
 	&__title {
 		max-width: 840px;
 	}
@@ -39,6 +43,19 @@
 	}
 	.tabs {
 		width: 33%;
+	}
+	.tabs__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.tabs__uptext {
+		margin-right: 30px;
+	}
+	.tab__icon {
+		svg {
+			transform: rotate(90deg);
+		}
 	}
 	ul.tabs {
 		display: inline-block;
@@ -141,6 +158,7 @@
 	.tab_drawer_heading {
 		display: none;
 		margin-left: 20px;
+
 		@include sm-d {
 			margin-left: 10px;
 		}
@@ -170,7 +188,8 @@
 			border-radius: 15px;
 			padding: 20px 30px 20px 20px;
 			margin-top: 10px;
-			display: block;
+			display: flex;
+			justify-content: space-between;
 			cursor: pointer;
 			-webkit-touch-callout: none;
 			-webkit-user-select: none;
@@ -185,6 +204,11 @@
 		}
 		.d_active {
 			color: $tab_text_color_active;
+			.tab__icon {
+				svg {
+					transform: rotate(270deg);
+				}
+			}
 		}
 	}
 }
