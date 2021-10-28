@@ -88,10 +88,16 @@
 			&:hover {
 				color: $tab_text_color_hover;
 				@include tabs-transition;
+				svg path {
+					fill: $tab_text_color_hover;
+				}
 			}
 			&.active {
 				color: $tab_text_color_active;
 				@include tabs-transition;
+				svg path {
+					fill: $tab_text_color_active;
+				}
 			}
 		}
 	}

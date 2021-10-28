@@ -41,6 +41,19 @@
 	.tabss {
 		width: 33%;
 	}
+	.tabs__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.tabs__uptext {
+		margin-right: 30px;
+	}
+	.tab__icon {
+		svg {
+			transform: rotate(90deg);
+		}
+	}
 	ul.tabss {
 		display: inline-block;
 		vertical-align: top;
