@@ -206,6 +206,9 @@
 
 			&:hover {
 				color: $tab_text_color_hover;
+				path {
+					fill: $accent;
+				}
 			}
 		}
 		.d_active {
