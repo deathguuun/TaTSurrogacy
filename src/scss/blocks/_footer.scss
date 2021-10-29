@@ -16,8 +16,40 @@
 		color: #fafafa;
 		margin-bottom: 27px;
 	}
+	svg {
+		&:hover {
+			path {
+				fill: $colorH1;
+			}
+		}
+		&:focus,
+		&:active {
+			path {
+				fill: $colorMain;
+			}
+		}
+	}
+
 	a {
 		color: #fafafa;
+		&:hover {
+			color: $colorH1;
+			svg path {
+				fill: $colorH1;
+			}
+		}
+	}
+	.mail-to {
+		display: flex;
+		svg {
+			margin-right: 5px;
+		}
+		&:hover {
+			svg path {
+				fill: transparent;
+				stroke: $colorH1;
+			}
+		}
 	}
 	&__wrapper {
 		display: flex;
